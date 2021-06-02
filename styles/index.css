@@ -1,0 +1,17 @@
+#allBody{
+    background-color: blue;
+    grid-row: 12;
+    @media (max-width: 576px) { 
+        background-color{background-color:yellow} ;
+        }
+        @media (max-width: 768px) { 
+            background-color{background-color:orange} ;
+         }
+        @media (max-width: 992px) { 
+            background-color{background-color:red} ;
+         }
+        @media (max-width: 1200px) { 
+            background-color{background-color:green} ; 
+        }
+}
+

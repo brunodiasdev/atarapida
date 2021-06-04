@@ -5,12 +5,12 @@
 }
 header{
     background-color: white;
-    height: 20vh;
+    height: 112px;
     width: 55rem;
     overflow: hidden;
     position: fixed;
     z-index:1000;
-    overflow:hidden;
+    /*overflow:hidden;*/
     padding:6px;
     margin:0 auto;
     padding-bottom: 0px;

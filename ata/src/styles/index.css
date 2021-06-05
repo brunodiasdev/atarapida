@@ -1,8 +1,10 @@
 #content{
     background-color: blue;
     margin: 0 1rem 0 1rem;
+    list-style: none;
     
 }
+/*-----------------CABEÇALHO/HEADER--------------------*/
 header{
     background-color: white;
     height: 112px;
@@ -35,12 +37,6 @@ header p {
     background-color: rgb(255, 0, 76);
     
 }
-.app1{
-    margin-top: 20vh;
-}
-.app2{
-    height: 80vh;
-}
 #barra{
     background-color: orangered;
     width: 82%;
@@ -49,13 +45,47 @@ header p {
     margin-top: 10px;
 }
 
-h3{
-    border:black;
-    background-color: purple;
+/*-----------------APP.js--------------------*/
+.navApp{
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+.BA{
+    color: white;
+    list-style: none;
+    padding: 0 5px 0 10px;
+    margin: 0;
+    border: black solid 1px;
+    border-radius: 0 50px 0 0;
+}
+.buttonApp1{background-image: url("../styles/images/orang1.jpg") ;}
+.buttonApp2{background-image: url("../styles/images/orang2.jpg"); color: black;}
+.buttonApp3{background-image: url("../styles/images/orang3.jpg"); color: black;}
+.buttonApp4{background-image: url("../styles/images/orang4.jpg") ;}
+.buttonApp5{background-image: url("../styles/images/orang5.jpg") ;}
+
+.bodyTextApp{
+    margin: 0;
+    background: none;
+    padding: 0 24px 30px 24px ;
+}
+.bodyText{
+    background-image: url("./images/orang1.jpg");
+    padding: 10px;
+    width: 500px;
+    height: 72vh;
+    border-radius: 0 50px 50px 50px;
+}
+
+/*-----------------APP in HTML--------------------*/
+.app1{
+    margin-top: 20vh;
+}
+.app2{
+    height: 80vh;
 }
 section{
-    background-color: rgb(251, 255, 0);
-
+    background-color: #FCA86B;
 }
 
 @media (min-width: 576px) { 

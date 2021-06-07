@@ -1,22 +1,25 @@
 
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './styles/index.css';
-
+import Atasimples from './atasimples';
 function App() {
   return (
     <>
-      <nav class="conteiner ">
-        <ul class="row navApp">
-          <li class="col-1.5 BA buttonApp1"> Ata Simples </li>
-          <li class="col-1.5 BA buttonApp2"> Ata Composta </li>
-          <li class="col-1.5 BA buttonApp3"> Ata Nova </li>
-          <li class="col-1.5 BA buttonApp4"> Ata Primitiva </li>
-          <li class="col-1.5 BA buttonApp5"> Personalisada </li>
+      <nav className="conteiner ">
+        <ul className="row navApp">
+          <li className="col-1.5 BA buttonApp1"> Ata Simples </li>
+          <li className="col-1.5 BA buttonApp2"> Ata Composta </li>
+          <li className="col-1.5 BA buttonApp3"> Ata Nova </li>
+          <li className="col-1.5 BA buttonApp4"> Ata Primitiva </li>
+          <li className="col-1.5 BA buttonApp5"> Personalisada </li>
         </ul>
       </nav>
-      <section class="conteiner">
-        <div class="row bodyTextApp">
-          <div class="col-12 bodyText">
 
+      <section className="conteiner">
+        <div className="row bodyTextApp">
+          <div className="col-12 bodyText">
+            <Atasimples/>
           </div>
         </div>
       </section>

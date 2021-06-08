@@ -3,12 +3,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import Atasimples from './atasimples';
+import Changeata from './changeata';
 function App() {
   return (
     <>
       <nav className="conteiner ">
         <ul className="row navApp">
-          <li className="col-1.5 BA buttonApp1"> Ata Simples </li>
+          <li onClick="render1()" className="col-1.5 BA buttonApp1"> Ata Simples </li>
           <li className="col-1.5 BA buttonApp2"> Ata Composta </li>
           <li className="col-1.5 BA buttonApp3"> Ata Nova </li>
           <li className="col-1.5 BA buttonApp4"> Ata Primitiva </li>
@@ -19,7 +20,8 @@ function App() {
       <section className="conteiner">
         <div className="row bodyTextApp">
           <div className="col-12 bodyText">
-            <Atasimples/>
+            
+           
           </div>
         </div>
       </section>

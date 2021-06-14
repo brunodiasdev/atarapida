@@ -5,14 +5,15 @@ import './styles/index.css';
 import Atasimples from './atasimples';
 import Changeata from './changeata';
 function App() {
-  function mudar(){
+  /*function mudar(){
     return
     const n12 = document.getElementsByClassName("bodyText")
     function decla(){
       const n12 = <Changeata/>
     }
     decla()
-  }
+  }*/
+  const mudaata = <Changeata/>
   return (
     <>
       <nav className="conteiner ">

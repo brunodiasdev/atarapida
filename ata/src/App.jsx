@@ -1,61 +1,39 @@
-
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 import './styles/index.css';
-import Atasimples from './atasimples';
-import Changeata from './changeata';
+import AtaSimples from './atasimples';
+import AtaComposta from './atacomposta';
+import AtaNova from './atanova';
+import AtaPrimitiva from './ataprimitiva';
+import Personalizar from './personalizar';
+
 function App() {
-  /*function mudar(){
-    return
-    const n12 = document.getElementsByClassName("bodyText")
-    function decla(){
-      const n12 = <Changeata/>
-    }
-    decla()
-  }*/
-  const mudaata = <Changeata/>
+  
+  const [ata,setAta] = useState("simples")
+
   return (
     <>
       <nav className="conteiner ">
         <ul className="row navApp">
-          <li className="col-1.5 BA buttonApp1" ><input type="button" onClick="mudar()" value="Ata Simples"></input> </li>
-          <li className="col-1.5 BA buttonApp2"> Ata Composta </li>
-          <li className="col-1.5 BA buttonApp3"> Ata Nova </li>
-          <li className="col-1.5 BA buttonApp4"> Ata Primitiva </li>
-          <li className="col-1.5 BA buttonApp5"> Personalisada </li>
+          <li className="col-1.5 BA buttonApp1" ><input type="button" onClick={() => setAta('simples')} value="Ata Simples"></input> </li>
+          <li className="col-1.5 BA buttonApp2"><input type="button" onClick={() => setAta('composta')} value="Ata Composta"></input>  </li>
+          <li className="col-1.5 BA buttonApp3"> <input type="button" onClick={() => setAta('nova')} value="Ata Nova"></input> </li>
+          <li className="col-1.5 BA buttonApp4"><input type="button" onClick={() => setAta('primitiva')} value="Ata Primitiva"></input> </li>
+          <li className="col-1.5 BA buttonApp5"> <input type="button" onClick={() => setAta('personalizada')} value="Personalizada"></input></li>
         </ul>
       </nav>
 
       <section className="conteiner">
         <div className="row bodyTextApp">
           <div className="col-12 bodyText">
-            
-           
+            {ata === 'simples' ? <AtaSimples/>:
+            ata === 'composta' ? <AtaComposta/>:
+            ata === 'nova' ? <AtaNova/>:
+            ata === 'primitiva' ? <AtaPrimitiva/>: <Personalizar/>}
           </div>
         </div>
       </section>
     </>
-
-
   );
 }
 
 export default App;
-
-
-/*<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>*/

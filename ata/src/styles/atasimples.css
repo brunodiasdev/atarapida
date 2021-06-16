@@ -2,3 +2,22 @@
     background-color: white;
     border-radius: 50px;
 }
+label{
+    color: white;
+}
+#fpresenca{
+    border-radius: 10px;
+    height: 120px;
+    resize: none;
+}
+#fata{
+    width: 95%;
+    height: 30vh;
+    margin-left: 10px;
+    border-radius: 10px;
+    resize: none;
+
+}
+.superbarratxt{
+    margin-top: 10px;
+}

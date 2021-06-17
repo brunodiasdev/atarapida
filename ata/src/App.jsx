@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles/index.css';
+import './styles/app.css';
 import AtaSimples from './atasimples';
 import AtaComposta from './atacomposta';
 import AtaNova from './atanova';

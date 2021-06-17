@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/index.css';
+import './styles/app.css';
    
 function nova(){
 return(

@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/index.css';
+import './styles/app.css';
 import './styles/atasimples.css';
    
 function nova(){
@@ -57,16 +57,16 @@ return(
 </div>
 <div className="conteiner">
     <div className="row superbarratxt">
-        <div className="col-9">
-            <button>O</button>
-            <button>O</button>
-            <button>O</button>
-            <button>O</button>
-            <button>O</button>
+        <div className="col-7 backbodytxtcont">
+            <input className="backbodytxt bbt1" type="button" value=""/>
+            <input className="backbodytxt bbt2" type="button" value=""/>
+            <input className="backbodytxt bbt3" type="button" value=""/>
+            <input className="backbodytxt bbt4" type="button" value=""/>
+            <input className="backbodytxt bbt5" type="button" value=""/>
         </div>
-        <div className="col-3">
-            <button className="col-6">Exportar PDF</button>
-            <button className="col-6">Exportar Word</button>
+        <div className="col-5">
+            <input className="col-4 buttonexportpdf" type="button" value="Exportar PDF"/>
+            <input className="col-5 buttonexportword" type="button" value="Exportar Word"/>
         </div>
     </div>
 </div>

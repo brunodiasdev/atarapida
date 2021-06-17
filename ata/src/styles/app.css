@@ -49,6 +49,23 @@ header p {
 .navApp{
     padding-top: 20px;
     margin-bottom: 0px;
+    
+}
+.navApp input{
+    text-align: center;
+    border-radius: 0 25px 0 0;
+    background: none;
+    border: none;
+    border: white;
+}
+.buttonApp1:hover, .buttonApp2:hover, .buttonApp3:hover, .buttonApp4:hover, .buttonApp5:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.527);
+    transition: 0.1s;
+}
+.buttonApp1:active, .buttonApp2:active, .buttonApp3:active, .buttonApp4:active, .buttonApp5:active{
+    transform: scale(1.1);
+    transition: 0.4s;
 }
 .BA{
     color: white;
@@ -58,11 +75,28 @@ header p {
     border: black solid 1px;
     border-radius: 0 50px 0 0;
 }
-.buttonApp1{background-image: url("../styles/images/orang1.jpg") ;}
-.buttonApp2{background-image: url("../styles/images/orang2.jpg"); color: black;}
-.buttonApp3{background-image: url("../styles/images/orang3.jpg"); color: black;}
-.buttonApp4{background-image: url("../styles/images/orang4.jpg") ;}
-.buttonApp5{background-image: url("../styles/images/orang5.jpg") ;}
+.buttonApp1{
+    background-image: url("../styles/images/orang1.jpg") ;
+    border: white solid 1px;
+}
+.buttonApp2{
+    background-image: url("../styles/images/orang2.jpg"); 
+    color: black;
+    border: white solid 1px;
+}
+.buttonApp3{
+    background-image: url("../styles/images/orang3.jpg"); 
+    color: black;
+    border: white solid 1px;
+}
+.buttonApp4{
+    background-image: url("../styles/images/orang4.jpg") ;
+    border: white solid 1px;
+}
+.buttonApp5{
+    background-image: url("../styles/images/orang5.jpg") ;
+    border: white solid 1px;
+}
 
 .bodyTextApp{
     margin: 0;
@@ -75,6 +109,7 @@ header p {
     width: 500px;
     height: 72vh;
     border-radius: 0 50px 50px 50px;
+    border: white solid 1px;
 }
 
 /*-----------------APP in HTML--------------------*/

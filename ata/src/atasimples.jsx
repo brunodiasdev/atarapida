@@ -1,8 +1,22 @@
 import React from 'react';
 import './styles/app.css';
 import './styles/atasimples.css';
-   
+import jsPDF from 'jspdf';
+
 function nova(){
+    function gerarPDF(){
+    var doc = new jsPDF()
+    let fempresa = document.getElementById("fempresa")
+    let ffilial = document.getElementById("ffilial")
+    let ftema = document.getElementById("ftema")
+    let fpresidindo = document.getElementById("fpresidindo")
+    let fdirigindo = document.getElementById("fdirigindo")
+    let fata = toString(document.getElementById("fata"))
+    let fpresenca = document.getElementById("fpresenca")
+//[fempresa,ffilial, ftema, fpresidindo, fdirigindo, fata, fpresenca]
+    doc.text(fata, 10, 10)
+    doc.save('Nova_Ata.pdf')
+    }
 return(
 <>
 <div className="conteiner">
@@ -65,12 +79,17 @@ return(
             <input className="backbodytxt bbt5" type="button" value=""/>
         </div>
         <div className="col-5">
-            <input className="col-4 buttonexportpdf" type="button" value="Exportar PDF"/>
+            <input onClick={() => gerarPDF()} className="col-4 buttonexportpdf" type="button" value="Exportar PDF"/>
             <input className="col-5 buttonexportword" type="button" value="Exportar Word"/>
         </div>
     </div>
 </div>
     
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+<script>
+    let doc = "asd"&rbrace;
+</script>
+
 
 </>)
 }

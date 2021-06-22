@@ -5,16 +5,23 @@ import jsPDF from 'jspdf';
 
 function nova(){
     function gerarPDF(){
-    var doc = new jsPDF()
-    let fempresa = document.getElementById("fempresa")
-    let ffilial = document.getElementById("ffilial")
-    let ftema = document.getElementById("ftema")
-    let fpresidindo = document.getElementById("fpresidindo")
-    let fdirigindo = document.getElementById("fdirigindo")
-    let fata = toString(document.getElementById("fata"))
-    let fpresenca = document.getElementById("fpresenca")
+        function salvardados1(){
+            let fempresa = toString(document.getElementById("fempresa"))
+            let ffilial = toString(document.getElementById("ffilial"))
+            let ftema = toString(document.getElementById("ftema"))
+            let fpresidindo = toString(document.getElementById("fpresidindo"))
+            let fdirigindo = toString(document.getElementById("fdirigindo"))
+            let fata = toString(document.getElementById("fata"))
+            let fpresenca = toString(document.getElementById("fpresenca"))
+            var dataAta = [fempresa, ffilial, ftema, fpresidindo, fdirigindo, toString(fata), fpresenca]
+            return dataAta
+        }
+        salvardados1()
+        let dataAta = salvardados1()
+        var doc = new jsPDF()
+    
 //[fempresa,ffilial, ftema, fpresidindo, fdirigindo, fata, fpresenca]
-    doc.text(fata, 10, 10)
+    doc.text(10, 10, 'asd' + dataAta[6])
     doc.save('Nova_Ata.pdf')
     }
 return(

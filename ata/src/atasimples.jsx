@@ -17,11 +17,11 @@ function nova(){
             return dataAta
         }
         salvardados1()
+        //consttt test = document.getElementById("fata")
         let dataAta = salvardados1()
         var doc = new jsPDF()
     
-//[fempresa,ffilial, ftema, fpresidindo, fdirigindo, fata, fpresenca]
-    doc.text(10, 10, 'asd' + dataAta[6])
+    doc.text(10, 10, ' ')
     doc.save('Nova_Ata.pdf')
     }
 return(

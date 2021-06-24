@@ -6,22 +6,28 @@ import jsPDF from 'jspdf';
 function nova(){
     function gerarPDF(){
         function salvardados1(){
-            let fempresa = toString(document.getElementById("fempresa"))
-            let ffilial = toString(document.getElementById("ffilial"))
-            let ftema = toString(document.getElementById("ftema"))
-            let fpresidindo = toString(document.getElementById("fpresidindo"))
-            let fdirigindo = toString(document.getElementById("fdirigindo"))
-            let fata = toString(document.getElementById("fata"))
-            let fpresenca = toString(document.getElementById("fpresenca"))
-            var dataAta = [fempresa, ffilial, ftema, fpresidindo, fdirigindo, toString(fata), fpresenca]
+            let fempresaGet = document.getElementById("fempresa")
+            let fempresa = fempresaGet.value
+            let ffilialGet = document.getElementById("ffilial")
+            let ffilial = ffilialGet.value
+            let ftemaGet = document.getElementById("ftema")
+            let ftema = ftemaGet.value
+            let fpresidindoGet = document.getElementById("fpresidindo")
+            let fpresidindo = fpresidindoGet.value
+            let fdirigindoGet = document.getElementById("fdirigindo")
+            let fdirigindo = fdirigindoGet.value
+            let fataGet = document.getElementById("fata")
+            let fata = fataGet.value
+            let fpresencaGet = document.getElementById("fpresenca")
+            let fpresenca = fpresencaGet.value
+            var dataAta = [fempresa, ffilial, ftema, fpresidindo, fdirigindo, fata, fpresenca]
             return dataAta
         }
         salvardados1()
-        //consttt test = document.getElementById("fata")
         let dataAta = salvardados1()
         var doc = new jsPDF()
     
-    doc.text(10, 10, ' ')
+    doc.text(10, 10, dataAta)
     doc.save('Nova_Ata.pdf')
     }
 return(

@@ -5,7 +5,7 @@ import jsPDF from 'jspdf';
 
 function nova(){
     function gerarPDF(){
-        function salvardados1(){
+        /*function salvardados1(){
             let fempresaGet = document.getElementById("fempresa")
             let fempresa = fempresaGet.value
             let ffilialGet = document.getElementById("ffilial")
@@ -24,10 +24,37 @@ function nova(){
             return dataAta
         }
         salvardados1()
-        let dataAta = salvardados1()
-        var doc = new jsPDF()
-    
-    doc.text(10, 10, dataAta)
+        let dataAta = salvardados1()*/
+        let fempresaGet = document.getElementById("fempresa")
+        let fempresa = fempresaGet.value
+        let ffilialGet = document.getElementById("ffilial")
+        let ffilial = ffilialGet.value
+        let ftemaGet = document.getElementById("ftema")
+        let ftema = ftemaGet.value
+        let fpresidindoGet = document.getElementById("fpresidindo")
+        let fpresidindo = fpresidindoGet.value
+        let fdirigindoGet = document.getElementById("fdirigindo")
+        let fdirigindo = fdirigindoGet.value
+        let fataGet = document.getElementById("fata")
+        let fata = fataGet.value
+        let fpresencaGet = document.getElementById("fpresenca")
+        let fpresenca = fpresencaGet.value
+        
+        var doc = new jsPDF('p','mm', 'a4')
+        var options = {
+            maxWidth: {maxWidth: 100},
+            margin: { horizontal: 5 },
+            bodyStyles: { valign: 'top' },
+            styles: { overflow: 'linebreak', overflowColumns: false },
+        }
+    //https://www.youtube.com/watch?v=RXhz-MO_eHc
+    //doc.text(10, 10, fempresa)
+    //doc.text(10, 10, ffilial)
+    //doc.text(fata, doc.internal.pageSize.width, 50, null, null, 'center')
+    //doc.fromHTML(fata, 20, 20, {"width": 300} )
+    doc.text(fata, 20, 20, 0, 0, "justify", options)
+    //doc.text(fata, 10, 10, )
+    //doc.text(10, 10, fpresenca)
     doc.save('Nova_Ata.pdf')
     }
 return(

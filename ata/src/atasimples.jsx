@@ -25,6 +25,8 @@ function nova(){
         }
         salvardados1()
         let dataAta = salvardados1()*/
+        var doc = new jsPDF("p","mm", "a4")
+        
         let fempresaGet = document.getElementById("fempresa")
         let fempresa = fempresaGet.value
         let ffilialGet = document.getElementById("ffilial")
@@ -36,27 +38,28 @@ function nova(){
         let fdirigindoGet = document.getElementById("fdirigindo")
         let fdirigindo = fdirigindoGet.value
         let fataGet = document.getElementById("fata")
-        let fata = fataGet.value
+        let fata1 = fataGet.value
+        let fata = doc.splitTextToSize(fata1, 180)
         let fpresencaGet = document.getElementById("fpresenca")
         let fpresenca = fpresencaGet.value
         
-        var doc = new jsPDF('p','mm', 'a4')
-        var options = {
-            maxWidth: {maxWidth: 100},
-            margin: { horizontal: 5 },
-            bodyStyles: { valign: 'top' },
-            styles: { overflow: 'linebreak', overflowColumns: false },
-        }
     //https://www.youtube.com/watch?v=RXhz-MO_eHc
     //doc.text(10, 10, fempresa)
     //doc.text(10, 10, ffilial)
     //doc.text(fata, doc.internal.pageSize.width, 50, null, null, 'center')
     //doc.fromHTML(fata, 20, 20, {"width": 300} )
-    doc.text(fata, 20, 20, 0, 0, "justify", options)
+    doc.text(fata, 20, 10)
     //doc.text(fata, 10, 10, )
     //doc.text(10, 10, fpresenca)
     doc.save('Nova_Ata.pdf')
     }
+/*
+function gerarPdfAta() {
+  let ataFinalText = document.getElementById("fata");
+   let wrappedText = doc.splitTextToSize(ataFinalText, 180);
+  doc.text(wrappedText, 20, 20);
+  doc.save("Nova_Ata.pdf");
+}*/
 return(
 <>
 <div className="conteiner">
